@@ -1,0 +1,46 @@
+GET http://localhost:3000/devices
+
+###
+
+GET http://localhost:3000/devices/61dbf4ce8d47ae9876dd78ba
+
+###
+
+POST http://localhost:3000/devices
+Content-Type: application/json
+
+{
+	"name": "Fridge",
+	"sensor": [
+		{
+			"name": "Water leaks",
+			"state": "No"
+		},
+		{
+			"name": "Temperature",
+			"state": "Normal"
+		},
+		{
+			"name": "Defrost level",
+			"state": "Normal"
+		}
+	]
+}
+
+###
+
+DELETE http://localhost:3000/devices/61dbf4ce8d47ae9876dd78ba
+
+###
+
+PATCH http://localhost:3000/devices/61df54c667936b338b353bd0
+Content-Type: application/json
+
+{
+	"sensor": [
+		{
+			"name": "Temperature",
+			"state": "Low"
+		}
+	]
+}
